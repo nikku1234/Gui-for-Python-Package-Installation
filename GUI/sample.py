@@ -53,6 +53,9 @@ class MyFirstGUI:
 		for i in lines:
 			package = i
 			os.system("pip install "+package)
+			os.system("pip install pip-review")
+			os.system("pip-review --local --interactive")
+
     
 
 	def tensorflow_cpu(self):
