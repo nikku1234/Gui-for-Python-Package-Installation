@@ -1,6 +1,6 @@
 # Gui-for-Python-Package-Installation
 For python based GUI for installing different packages, avoiding all the hassle going to the terminal and typing 'pip install' or 'sudo apt get'
-![](Screenshot%202020-02-21%20at%2013.07.00.png)
+![](image.png)
 
 # For the installation of the Tensorflow and Pytorch Packages
   It basically creates a new conda environment for each version specifically.
