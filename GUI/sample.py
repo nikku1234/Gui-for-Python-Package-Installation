@@ -108,4 +108,3 @@ root = Tk()
 my_gui = MyFirstGUI(root)
 root.geometry("500x500")
 root.mainloop()
-
