@@ -22,6 +22,18 @@ class MyFirstGUI:
 		self.close_button = Button(master,text="Close",command=master.quit)
 		self.close_button.pack()
 
+		self.tensorflow_cpu_button = Button(master,text="Install Tensorflow Cpu Packages",command=self.tensorflow_cpu)
+		self.list_button.pack()
+
+		self.tensorflow_gpu_button = Button(master,text="Install Tensorflow Gpu Packages",command=self.tensorflow_gpu)
+		self.list_button.pack()
+
+		self.pytorch_cpu_button = Button(master,text="Install PyTorch Cpu Packages",command=self.pytorch_cpu)
+		self.list_button.pack()
+
+		self.pytorch_gpu_button = Button(master,text="Install Pytorch Gpu Packages",command=self.pytorch_gpu)
+		self.list_button.pack()
+
 	def greet(self):
 		print("Greetings!")
 
@@ -31,9 +43,19 @@ class MyFirstGUI:
 	def list1(self):
 		os.system("pip install numpy")
 
+	def tensorflow_cpu(self):
+
+	def tensorflow_gpu(self):
+
+	def pytorch_cpu(self):
+
+	def pytorch_gpu(self):
+		
+
 
 
 root = Tk()
 my_gui = MyFirstGUI(root)
+root.geometry("500x200")
 root.mainloop()
 
