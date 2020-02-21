@@ -1,0 +1,13 @@
+ipykernel
+keras
+-c conda-forge opencv
+-c anaconda scikit-learn
+-c conda-forge pydicom
+-c conda-forge matplotlib
+-c anaconda pillow
+-c anaconda scikit-image
+-c anaconda pandas
+-c anaconda xlrd
+-c conda-forge theano
+imutils
+-c conda-forge lightgbm-c conda-forge hyperopt

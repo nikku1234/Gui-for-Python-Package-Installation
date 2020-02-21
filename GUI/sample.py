@@ -19,8 +19,14 @@ class MyFirstGUI:
 		self.list_button = Button(master,text="List Directories",command=self.list1)
 		self.list_button.pack()
 
+		self.gpu_driver_button = Button(master,text="Installation of GPU Drivers(Ubuntu)",command=self.gpu_driver)
+		self.gpu_driver_button.pack()
+
 		self.basic_button = Button(master,text="Install Basic Packages",command=self.basic)
 		self.basic_button.pack()
+
+		self.basic_conda_button = Button(master,text="Install all the conda Packages",command=self.basic)
+		self.basic_conda_button.pack()
 
 		self.tensorflow_cpu_button = Button(master,text="Install Tensorflow Cpu Packages",command=self.tensorflow_cpu)
 		self.tensorflow_cpu_button.pack()
@@ -43,6 +49,11 @@ class MyFirstGUI:
 	def action(self):
 		os.system("echo 'hello world'")
 
+	def gpu_driver(self):
+		os.system("ubuntu-drivers devices")
+		os.system("sudo add-apt-repository ppa:graphics-drivers/ppa")
+		os.system("sudo ubuntu-drivers autoinstall")
+
 	def list1(self):
 		os.system("pip install numpy")
 
@@ -59,16 +70,18 @@ class MyFirstGUI:
     
 
 	def tensorflow_cpu(self):
-		print("Greetings!")
+		os.system("conda create -n tensorflow_env tensorflow")
+		os.system("conda activate tensorflow_env")
 
 	def tensorflow_gpu(self):
-		print("Greetings!")
+		os.system("conda create -n tensorflow_gpuenv tensorflow-gpu")
+		os.system("conda activate tensorflow_gpuenv")
 
 	def pytorch_cpu(self):
-		print("Greetings!")
+		os.system("conda create -n pytorch python=3.6 numpy=1.13.3 scipy")
 
 	def pytorch_gpu(self):
-		print("Greetings!")
+		os.system("conda install pytorch torchvision cudatoolkit=10.1 -c pytorch")
 
 
 
