@@ -19,6 +19,9 @@ class MyFirstGUI:
 		self.list_button = Button(master,text="List Directories",command=self.list1)
 		self.list_button.pack()
 
+		self.basic_button = Button(master,text="Install Basic Packages",command=self.basic)
+		self.basic_button.pack()
+
 		self.tensorflow_cpu_button = Button(master,text="Install Tensorflow Cpu Packages",command=self.tensorflow_cpu)
 		self.tensorflow_cpu_button.pack()
 
@@ -42,6 +45,15 @@ class MyFirstGUI:
 
 	def list1(self):
 		os.system("pip install numpy")
+
+	def basic(self):
+		with open('basic_requirements.txt') as f:
+			lines = [line.rstrip() for line in f]
+		#print(lines)
+		for i in lines:
+			package = i
+			os.system("pip install "+package)
+    
 
 	def tensorflow_cpu(self):
 		print("Greetings!")
