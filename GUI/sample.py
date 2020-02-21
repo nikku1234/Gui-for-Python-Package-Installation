@@ -5,9 +5,9 @@ import subprocess
 class MyFirstGUI:
 	def __init__(self,master):
 		self.master = master
-		master.title("A Simple GUI")
+		master.title("Python Package GUI Installation")
 
-		self.label = Label(master,text="This is the first GUI try")
+		self.label = Label(master,text="This is the first GUI try, BETA")
 		self.label.pack()
 
 		self.greet_button = Button(master,text="Greet",command=self.greet)
