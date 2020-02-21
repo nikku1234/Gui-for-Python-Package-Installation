@@ -6,9 +6,11 @@ For python based GUI for installing different packages, avoiding all the hassle 
   It basically creates a new conda environment for each version specifically.
   ## Tensorflow Cpu 
      Enviornment name :tensorflow_env
-     To activate this enviornment after installation, type conda activate tensorflow_env
+     To activate this enviornment after installation, type 
+     conda activate tensorflow_env
    ## Tensorflow Gpu 
      Enviornment name :tensorflow_gpuenv
-     To activate this enviornment after installation, type conda activate tensorflow_gpuenv
+     To activate this enviornment after installation, type 
+     conda activate tensorflow_gpuenv
    ## PyTorch Env
     conda activate pytorch
