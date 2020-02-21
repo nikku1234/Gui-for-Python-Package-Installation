@@ -25,7 +25,10 @@ class MyFirstGUI:
 		self.basic_button = Button(master,text="Install Basic Packages",command=self.basic)
 		self.basic_button.pack()
 
-		self.basic_conda_button = Button(master,text="Install all the conda Packages",command=self.basic)
+		self.conda_button = Button(master,text="Install Conda ",command=self.conda_install)
+		self.conda_button.pack()
+
+		self.basic_conda_button = Button(master,text="Install all the conda Packages",command=self.basic_conda)
 		self.basic_conda_button.pack()
 
 		self.tensorflow_cpu_button = Button(master,text="Install Tensorflow Cpu Packages",command=self.tensorflow_cpu)
@@ -56,6 +59,21 @@ class MyFirstGUI:
 
 	def list1(self):
 		os.system("pip install numpy")
+
+	def conda_install(self):
+		os.system("cd /tmp")
+		os.system("curl -O https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh")
+		os.system("bash Anaconda3-5.2.0-Linux-x86_64.sh")
+		os.system("conda update conda")
+		os.system("conda update anaconda")
+
+	def basic_conda(self):
+		with open('conda_requirements.txt') as f:
+			lines = [line.rstrip() for line in f]
+		#print(lines)
+		for i in lines:
+			package = i
+			os.system("conda install "+package)
 
 	def basic(self):
 		with open('basic_requirements.txt') as f:
