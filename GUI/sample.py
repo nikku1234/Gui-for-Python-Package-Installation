@@ -44,13 +44,17 @@ class MyFirstGUI:
 		os.system("pip install numpy")
 
 	def tensorflow_cpu(self):
+		print("Greetings!")
 
 	def tensorflow_gpu(self):
+		print("Greetings!")
 
 	def pytorch_cpu(self):
+		print("Greetings!")
 
 	def pytorch_gpu(self):
-		
+		print("Greetings!")
+
 
 
 
