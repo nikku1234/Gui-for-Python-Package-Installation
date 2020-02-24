@@ -1,3 +1,7 @@
+# Written by Nikhil Ramesh on 22-Feb-2019
+# Last update on 24-Feb-2019
+
+
 from tkinter import Tk,Label,Button
 import os
 import subprocess
@@ -24,6 +28,9 @@ class MyFirstGUI:
 
 		self.basic_button = Button(master,text="Install Basic Packages",command=self.basic)
 		self.basic_button.pack()
+
+		self.update_all_button = Button(master,text="Update all the Packages Installed",command=self.update_all)
+		self.update_all_button.pack()
 
 		self.conda_button = Button(master,text="Install Conda ",command=self.conda_install)
 		self.conda_button.pack()
@@ -59,6 +66,10 @@ class MyFirstGUI:
 
 	def list1(self):
 		os.system("pip install numpy")
+
+	def update_all(self):
+		os.system("pip install yolk3k")
+		os.system("yolk --upgrade")
 
 	def conda_install(self):
 		os.system("cd /tmp")
