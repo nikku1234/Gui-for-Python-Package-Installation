@@ -1,0 +1,11 @@
+
+apt-get install python-tk (restart after)
+sudo apt-get install python-setuptools
+sudo easy_install suds
+sudo apt-get install python-matplotlib
+sudo apt-get install python-numpy
+sudo apt-get install python-scipy
+sudo apt-get install python-imaging python-imaging-tk
+sudo easy_install patsy
+sudo easy_install pandas
+sudo easy_install fastcluster
