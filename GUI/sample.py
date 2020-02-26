@@ -50,6 +50,9 @@ class MyFirstGUI:
 		self.pytorch_gpu_button = Button(master,text="Install Pytorch Gpu Packages",command=self.pytorch_gpu)
 		self.pytorch_gpu_button.pack()
 
+		self.all_clear_button = Button(master,text="Clear all the Packages",command=self.all_clear)
+		self.all_clear_button.pack()
+
 		self.close_button = Button(master,text="Close",command=master.quit)
 		self.close_button.pack()
 
@@ -96,7 +99,7 @@ class MyFirstGUI:
 			os.system("pip install pip-review")
 			os.system("pip-review --local --interactive")
 
-    
+
 
 	def tensorflow_cpu(self):
 		os.system("conda create -n tensorflow_env tensorflow")
@@ -111,6 +114,9 @@ class MyFirstGUI:
 
 	def pytorch_gpu(self):
 		os.system("conda install pytorch torchvision cudatoolkit=10.1 -c pytorch")
+
+	def all_clear(self):
+		os.system("pip freeze | xargs pip uninstall -y")
 
 
 
