@@ -1,0 +1,3 @@
+add docker 
+test all the cases 
+set of env for the docker images 
